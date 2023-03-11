@@ -1,0 +1,70 @@
+
+
+<div class="main-content">
+    <div class="widget widget-table">
+        <div class="widget-header">
+            <h3><i class="fa fa-table"></i> {{vm.viewName}}</h3> 
+        </div>
+        <div class="widget-content">
+            <div class="alert alert-info fade in" data-ng-show="vm.showInstruction">
+                <button class="close" data-dismiss="alert">&times;</button>
+                <i class="fa fa-info-circle"></i> {{vm.instruction}}
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-10">
+                    <form>
+                        <label for="" class="control-label">Main Search: </label>
+                        <input type="text" class="input-sm" placeholder="Enter Ref Number to search" ng-model="vm.searchParam" style="width:300px" />
+                        <button type="button" class="btn btn-default btn-sm" ng-click="vm.loadAmortizationOutputBySearch()">Load</button>
+                        <button type="button" class="btn btn-info btn-sm" ng-click="vm.exportAllData()">Export All</button>
+                        <label for="" class="control-label">Reporting Date:</label>
+                        <!--<input type="date" ng-model="vm.endDate" class="input-sm" style="width:200px" />-->
+                        <input type="text" ng-model="vm.endDate" class="input-sm" data-datepicker-popup="dd/MM/yyyy" data-is-open="vm.openedEndDate" style="width:100px;" />
+                        <button type="button" class="btn btn-default btn-sm" ng-click="vm.openEndDate($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+
+                       <!-- <input  type="text" ng-model="vm.processDate" class="form-control input-sm" data-datepicker-popup="dd/MM/yyyy" style="width:200px;background-color:lightblue" />-->
+                        <button type="button" class="btn btn-info btn-sm" ng-click="vm.storeAmortizationOutputProcess()">Load for Selected Date</button>
+
+
+                        <button type="button" class="btn btn-info btn-sm" ng-click="vm.refresh()">Refresh</button>
+                    </form>
+                </div>
+
+            </div>
+
+
+            <br />
+            
+            <table id="amortizationoutputsTable" class="table table-hover table-striped table-bordered table-advanced tablesorter display datatable">
+
+                <thead>
+                    <tr>
+                        <th>RefNo</th>
+                        <th>Date</th>
+                        <th>EIR</th>
+                        <th>Daily EIR</th>
+                        <th>Norminal Rate</th>
+                        <th>Amountprinc End</th>
+                        <th>Amortizedcost</th>
+                        <th>Amortizedcost+Overdue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="amortizationoutput in vm.amortizationoutputs">
+                        <td>{{ amortizationoutput.Refno }}</td>
+                        <td>{{ amortizationoutput.Date | date}}</td>
+                        <td>{{ amortizationoutput.EIR }}</td>
+                        <td>{{ amortizationoutput.DailyEir }}</td>
+                        <td>{{ amortizationoutput.NorminalRate }}</td>
+                        <td>{{ amortizationoutput.AmountPrincEnd | number}}</td>
+                        <td>{{ amortizationoutput.AmortizedCost | number}}</td>
+                        <td>{{ amortizationoutput.AmortizedCost_OverDue | number}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

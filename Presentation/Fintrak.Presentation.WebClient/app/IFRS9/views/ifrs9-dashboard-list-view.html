@@ -1,0 +1,169 @@
+﻿
+<div class="main-header">
+    <h2>DASHBOARD</h2>
+    <em>Executive Summary</em>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        <!-- SALES INFO SUMMARY -->
+        <div class="widget">
+            <div class="widget-header">
+                <h3><i class="fa fa-bar-chart-o" style="text-align:center"></i>Yield on Asset</h3> <em></em>
+            </div>
+            <div class="widget-content">
+                <div class="outer">
+                    <div class="inner height=" 100"" style="text-align:center">
+                        <font size="7" color="#ff0000" text-align:center>11.27%</font>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <!-- SALES INFO SUMMARY -->
+        <div class="widget">
+            <div class="widget-header">
+                <h3><i class="fa fa-bar-chart-o" style="text-align:center"></i>Cost to Income</h3> <em></em>
+            </div>
+            <div class="widget-content">
+                <div class="outer">
+                    <div class="inner height=" 100"" style="text-align:center">
+                        <font size="7" color="#ff0000" text-align:center>43.12%</font>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <!-- SALES INFO SUMMARY -->
+        <div class="widget">
+            <div class="widget-header">
+                <h3><i class="fa fa-bar-chart-o" style="text-align:center"></i> Loan to Deposit Ratio</h3> <em></em>
+            </div>
+            <div class="widget-content">
+                <div class="outer">
+                    <div class="inner height=" 100"" style="text-align:center">
+                        <font size="7" color="#ff0000" text-align:center>51.27%</font>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- END SALES INFO SUMMARY -->
+    </div>
+    
+
+    <div class="col-md-2">
+        <!-- SALES INFO SUMMARY -->
+        <div class="widget">
+            <div class="widget-header">
+                <h3><i class="fa fa-bar-chart-o"></i> ROA</h3> <em></em>
+            </div>
+            <div class="widget-content">
+                <div class="outer">
+                    <div class="inner height=" 100"" style="text-align:center">
+                        <font size="7" color="#ff0000" text-align:center>24.8%</font>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- END SALES INFO SUMMARY -->
+    </div>
+
+    <div class="col-md-2">
+        <!-- SALES INFO SUMMARY -->
+        <div class="widget">
+            <div class="widget-header">
+                <h3><i class="fa fa-bar-chart-o"></i> ROE</h3> <em></em>
+            </div>
+            <div class="widget-content">
+                <div class="outer">
+                    <div class="inner height=" 100"" style="text-align:center">
+                        <font size="7" color="#ff0000" text-align:center>60.52%</font>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- END SALES INFO SUMMARY -->
+    </div>
+
+    <div class="col-md-2">
+        <!-- SALES INFO SUMMARY -->
+        <div class="widget">
+            <div class="widget-header">
+                <h3><i class="fa fa-bar-chart-o"></i> ROCE</h3> <em></em>
+            </div>
+            <div class="widget-content">
+                <div class="outer">
+                    <div class="inner height=" 100"" style="text-align:center">
+                        <font size="7" color="#ff0000" text-align:center>43.17%</font>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- END SALES INFO SUMMARY -->
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="widget">
+            <div class="widget-header">
+                <h3><i class="fa fa-bar-chart-o"></i>Debt Ratio</h3>
+            </div>
+            <div class="widget-content">
+
+                <div id="mychart3">
+                    <div fusioncharts
+                         width="730"
+                         height="350"
+                         type="Doughnut2D.swf"
+                         datasource="{{bucketSource}}">
+
+                    </div>
+                </div>
+
+
+            </div>
+            <!--<div class="widget-content">-->
+        </div>
+    </div>
+    <div class="col-md-6">
+        <!-- WIDGET VISIT AND SALES CHART -->
+        <div class="widget">
+            <div class="widget-header">
+                <h3><i class="fa fa-bar-chart-o"></i>Summary of Earnings</h3>
+            </div>
+            <div class="widget-content">
+                <div id="mychart2">
+                    <div fusioncharts
+                         width="730"
+                         height="350"
+                         type="column2d"
+                         datasource="{{sectorialSource}}">
+
+                    </div>
+                </div>
+
+
+            </div>
+            <!--<div class="widget-content">-->
+        </div>
+        <!-- END WIDGET VISIT AND SALES CHART -->
+    </div>
+</div>
+
+
+
+<!-- /main -->

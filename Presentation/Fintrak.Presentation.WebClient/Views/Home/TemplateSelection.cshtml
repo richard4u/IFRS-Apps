@@ -1,0 +1,106 @@
+﻿@{
+    Layout = null;
+}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<head>
+    <title>Template | Fintrak Enterprise</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Fintrak Enterprise">
+    <meta name="author" content="The Develovers">
+    <!-- CSS -->
+    <link href="~/app/assets/css/bootstrap-4.6.0.min.css" rel="stylesheet" />
+    <link href="~/app/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="~/app/assets/css/main.css" rel="stylesheet" type="text/css">
+    <link href="~/app/assets/css/revamp.css" rel="stylesheet" />
+    <link href="~/app/assets/css/toastr.min.css" rel="stylesheet" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/app/assets/ico/Fintrak-Favicon_144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/app/assets/ico/Fintrak-Favicon_114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/app/assets/ico/Fintrak-Favicon_72x72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="~/app/assets/ico/Fintrak-Favicon_57x57.png">
+    <link rel="shortcut icon" href="~/app/assets/ico/favicon.png">
+</head>
+<body data-ng-app="fintrak.extra">
+    <div class="rv_loginbg">
+        <div class="wrapper full-page-wrapper page-auth page-login text-center">
+            <div class="inner-page">
+                <div class="logo">
+                    <h2>Choose your kind of business</h2>
+                </div>
+                <div class="login-box center-block" style="width:1000px">
+
+                    <!-- secondary stat -->
+                    <div class="row">
+                        <div class="col-md-3" style="margin: 2em 2em 2em 4em">
+                            <a href="@Url.Action("Template", "Home", new { template = "Oilgas" })" onclick="return confirm('Do you want to proceed with Oil and Gas?')">
+                                <div class="card bg-dark text-white">
+                                    <img src="~/app/assets/img/oilgas.jpg" class="card-img" alt="...">
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title">OIL & GAS</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-3" style="margin: 2em">
+                            <a href="@Url.Action("Template", "Home", new { template = "Retail" })" onclick="return confirm('Do you want to proceed with Retail?')">
+                                <div class="card bg-dark text-white">
+                                    <img src="~/app/assets/img/Retail.jpg" class="card-img" alt="...">
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title">RETAIL</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4" style="margin: 2em 0em 2em 2em; padding-right:6em">
+                            <a href="@Url.Action("Template", "Home", new { template = "Manufacturing" })" onclick="return confirm('Do you want to proceed with Manufacturing?')">
+                                <div class="card bg-dark text-white">
+                                    <img src="~/app/assets/img/manu2.jpg" height="159em" class="card-img" alt="...">
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title">MANUFACTURING</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end secondary stat -->
+
+                    <div class="links">
+                        <p><a class="btn btn-custom-primary btn-lg btn-block btn-auth" href="@Url.Action("Logout", "Account")">Logout</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">&copy; 2014-@DateTime.Now.Year Powered by FinTrak Software</footer>
+    <!-- Javascript -->
+    @*<script type="text/javascript">
+        window.Fintrak = {};
+        (function (se) {
+            var rootPath;
+            se.rootPath = rootPath;
+        }(window.Fintrak));
+        Fintrak.rootPath = '@Url.Content("~")';
+        </script>*@
+
+
+    <script src="~/app/assets/js/jquery/jquery-3.5.0.min.js"></script>
+    <script src="~/app/libs/angular.js"></script>
+    <script src="~/app/libs/angular-resource.js"></script>
+    <script src="~/app/libs/angular-route.js"></script>
+    <script src="~/app/assets/js/bootstrap/bootstrap.js"></script>
+    <script src="~/app/assets/js/plugins/modernizr/modernizr.js"></script>
+    <script src="~/app/assets/js/toastr.min.js"></script>
+    @*<script type="text/javascript">
+            window.onload = toastr.success('Your License is Valid', 'FINTRAK')
+        </script>*@
+
+    <script src="~/app/common/fintrak-extra.js"></script>
+
+</body>
+</html>

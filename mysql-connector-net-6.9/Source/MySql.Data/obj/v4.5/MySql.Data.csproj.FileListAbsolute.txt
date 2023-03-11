@@ -1,0 +1,8 @@
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\mysql-connector-net-6.9\Source\MySql.Data\bin\v4.5\Debug\MySql.Data.dll
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\mysql-connector-net-6.9\Source\MySql.Data\bin\v4.5\Debug\MySql.Data.pdb
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\mysql-connector-net-6.9\Source\MySql.Data\obj\v4.5\MySql.Data.csproj.AssemblyReference.cache
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\mysql-connector-net-6.9\Source\MySql.Data\obj\v4.5\MySql.Data.MySqlClient.Properties.Resources.resources
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\mysql-connector-net-6.9\Source\MySql.Data\obj\v4.5\MySql.Data.csproj.GenerateResource.cache
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\mysql-connector-net-6.9\Source\MySql.Data\obj\v4.5\MySql.Data.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\mysql-connector-net-6.9\Source\MySql.Data\obj\v4.5\MySql.Data.dll
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\mysql-connector-net-6.9\Source\MySql.Data\obj\v4.5\MySql.Data.pdb

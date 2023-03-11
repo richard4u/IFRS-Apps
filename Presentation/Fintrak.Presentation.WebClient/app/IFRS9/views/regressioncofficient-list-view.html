@@ -1,0 +1,65 @@
+
+
+<div class="main-content">
+    <div class="widget widget-table">
+
+        <div class="widget-header">
+            <h3><i class="fa fa-table"></i> {{vm.viewName}}</h3>
+        </div>
+
+        <div class="widget-content">
+            <div class="alert alert-info fade in" data-ng-show="vm.showInstruction">
+                <button class="close" data-dismiss="alert">&times;</button>
+                <i class="fa fa-info-circle"></i> {{vm.instruction}}
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <form>
+
+                        <label for="" class="control-label">Main Search: </label>
+                        <input type="text" class="input-sm" placeholder="Enter Reference Number or Account Number" ng-model="vm.searchParam " style="width:300px" />
+                        <button type="button" class="btn btn-default btn-sm" ng-click="vm.loadOdLGDComputationBySearch()">Load</button>
+                        <button type="button" class="btn btn-info btn-sm" ng-click="vm.refresh()">Refresh</button>
+
+                    </form>
+                </div>
+            </div>
+            <button ng-click="vm.exportAllData()">Export</button>
+
+            <table id="odlgdTable" class="table table-hover table-striped table-bordered table-advanced tablesorter display datatable">
+
+                <thead>
+                    <tr>
+                        <th>Product Type</th>
+                        <th>Parameter Type</th>
+                        <th>Alpha</th>
+                        <th>Beta1</th>
+                        <th>Beta2</th>
+                        <th>Beta3</th>
+
+                     
+                        <!--<th style="width: 3%;">Action</th>-->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="Reg in vm.RegressionCofficient">
+                        <td>{{ Reg.ProductType}}</td>
+                        <td>{{ Reg.ParameterType }}</td>
+                        <td>{{ Reg.Alpa	}}</td>
+                        <td>{{ Reg.Beta1 }}</td>
+                        <td>{{ Reg.Beta2 }}</td>
+                        <td>{{ Reg.Beta3 }}</td>
+
+      
+                    </tr>
+
+
+                </tbody>
+            </table>
+
+        </div>
+
+
+
+    </div>
+</div>

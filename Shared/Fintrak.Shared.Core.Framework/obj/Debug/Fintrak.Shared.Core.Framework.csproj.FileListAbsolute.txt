@@ -1,0 +1,8 @@
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\Shared\Fintrak.Shared.Core.Framework\bin\Debug\Fintrak.Shared.Core.Framework.dll
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\Shared\Fintrak.Shared.Core.Framework\bin\Debug\Fintrak.Shared.Core.Framework.pdb
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\Shared\Fintrak.Shared.Core.Framework\bin\Debug\System.Linq.Dynamic.dll
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\Shared\Fintrak.Shared.Core.Framework\obj\Debug\Fintrak.Shared.Core.Framework.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\Shared\Fintrak.Shared.Core.Framework\obj\Debug\Fintrak.Shared.Core.Framework.csproj.CopyComplete
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\Shared\Fintrak.Shared.Core.Framework\obj\Debug\Fintrak.Shared.Core.Framework.dll
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\Shared\Fintrak.Shared.Core.Framework\obj\Debug\Fintrak.Shared.Core.Framework.pdb
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\Shared\Fintrak.Shared.Core.Framework\obj\Debug\Fintrak.Shared.Core.Framework.csproj.AssemblyReference.cache

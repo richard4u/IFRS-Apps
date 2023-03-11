@@ -1,0 +1,60 @@
+﻿<div class="column form-group col-sm-12">
+    <form method="get" class="form-horizontal">
+
+        <div class="form-group col-sm-2" style="margin-left:1%; margin-right:1%;">
+            <label class="control-label"><b>Report Date</b></label>
+            <div class="controls">
+                <!--<select ng-model="vm.closedPeriodsmodel" class="form-control" ng-options="t.Date as t.Date for t in vm.closedPeriods"></select>-->
+                <select id="runDate" class="form-control required" ng-model="vm.closedPeriodsmodel">
+                    <option selected="" value=""> Please Select </option>
+                    <option ng-repeat="closedPeriod in vm.closedPeriods" value="{{ closedPeriod.Date }}">{{ closedPeriod.Date | date }}</option>
+                </select>
+                <!--<select ng-model="list_category" class="form-control" ng-options="t.Id as t.Name for t in vm.test"></select>-->
+            </div>
+        </div>
+
+        <div class="form-group col-sm-2" style="margin-right:1%;">
+            <label class="control-label"><b>Currency</b></label>
+            <div class="controls">
+                <select id="Currency" ng-model="vm.currenciesmodel" class="form-control required" ng-options="t.Symbol as t.Name for t in vm.currencies">
+                    <option selected="" value=""> Please Select </option>
+                </select>
+            </div>
+        </div>
+
+        <!--<div class="form-group col-sm-2" style="margin-right:1%;">
+            <label class="control-label"><b>Budget Type</b></label>
+            <div class="controls">
+                <select ng-model="vm.budgettypemodel" class="form-control">
+                    <option ng-repeat="budgettype in vm.budgettype" value="{{ budgettype.id }}">{{ budgettype.name }}</option>
+                </select>
+            </div>
+        </div>-->
+
+        <div class="form-group col-sm-2" style="margin-right:1%;">
+            <label class="control-label"><b>Duration Type</b></label>
+            <div class="controls">
+                <select id="durationType" ng-model="vm.durationTypemodel" class="form-control required">
+                    <option selected="" value=""> Please Select </option>
+                    <option ng-repeat="durationType in vm.durationType" value="{{ durationType }}">{{ durationType }}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group col-sm-1">
+            <label class="control-label"> &nbsp </label>
+            <button type="button" class="btn-sm btn btn-primary btn-rounded btn-block" data-ng-click="vm.reportSet004()" id="set004">
+                Apply
+            </button>
+        </div>
+
+    </form>
+
+</div>
+<div style="font-family:'Times New Roman', Times, serif; font-size:large; color:black">
+    <form class="form-horizontal" style="height: 85%;">
+        <div style="height:100%; background-color: transparent;">
+            <iframe src="{{'/app/reporting/views/IFRSReporting/FinstatReportViewerTrend.aspx?closedPeriods=' + vm.closedPeriodsmodel2 + '&currencies=' + vm.currenciesmodel2 + '&durationType=' + vm.durationTypemodel2 }}" style="width:100%;height:100%; overflow-y:hidden; overflow-x:auto"></iframe>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,2 @@
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\Business\Fintrak.Business.Core.Bootstrapper\obj\Debug\Fintrak.Business.Core.Bootstrapper.csproj.AssemblyReference.cache
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\Business\Fintrak.Business.Core.Bootstrapper\obj\Debug\Fintrak.Business.Core.Bootstrapper.csproj.CoreCompileInputs.cache

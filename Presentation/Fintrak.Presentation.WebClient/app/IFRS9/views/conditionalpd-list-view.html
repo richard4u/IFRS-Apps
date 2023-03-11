@@ -1,0 +1,107 @@
+﻿
+
+    <div class="main-content">
+        <div class="widget widget-table">
+            <div class="widget-header">
+                <h3><i class="fa fa-table"></i> {{vm.viewName}}</h3>
+            </div>
+            <div class="widget-content">
+                <div class="alert alert-info fade in" data-ng-show="vm.showInstruction">
+                    <button class="close" data-dismiss="alert">&times;</button>
+                    <i class="fa fa-info-circle"></i> {{vm.instruction}}
+                </div>
+
+
+                <div class="row">
+                    <form>
+                        <div class="form-group col-md-9">
+                            <label for="" class="control-label">Main Search: </label>
+                            <input type="text" class="input-sm" placeholder="Enter Asset Description to search" ng-model="vm.searchParam" style="width:200px" />
+                            <button type="button" class="btn btn-default btn-sm" ng-click="vm.loadConditionalPDBySearch()">Load</button>
+                            <button type="button" class="btn btn-info btn-sm" ng-click="vm.exportAllData()">Export All</button>
+
+
+                            <button type="button" class="btn btn-info btn-sm" ng-click="vm.refresh()">Refresh</button>
+                        </div>
+
+                        <div class="form-group col-md-3 row">
+                            <div class="col-sm-6">
+                                <label class="control-label dropdown">Asset Types: </label>
+                                <select class="form-control form-control-sm" ng-model="vm.assetTypeVal" ng-options="assetTypes.Key as assetTypes.Value for assetTypes in vm.assetType" style="width:110px;background-color:lightblue" ng-change="vm.loadConditionalPDByAssetType()"></select>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <label class="control-label">Asset Descripions: </label>
+                                <select class="form-control dropdown" ng-model="vm.searchParam" name="UniqueAssetD" id="UniqueAssetD" ng-change="vm.loadConditionalPDBySearch()" style="width:110px;background-color:lightblue">
+                                    <option ng-repeat="uniqueAssetDescriptions in vm.uniqueAssetDescription" [value]="uniqueAssetDescriptions">{{ uniqueAssetDescriptions }}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+                <br />
+
+
+                <table id="conditionalpdTable" class="table table-hover table-striped table-bordered table-advanced tablesorter display datatable">
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Asset Description</th>
+                            <th>Asset Type</th>
+                            <th>Counter Party</th>
+                            <th>Rating Agency</th>
+                            <th>Credit Rating</th>
+                            <th>S and P Rating</th>
+                            <th>PD1</th>
+                            <th>PD2</th>
+                            <th>PD3</th>
+                            <th>PD4</th>
+                            <th>PD5</th>
+                            <th>PD6</th>
+                            <th>PD7</th>
+                            <th>PD8</th>
+                            <th>PD9</th>
+                            <th>PD10</th>
+                            <th>PD11</th>
+                            <th>PD12</th>
+                            <th>PD13</th>
+                            <th style="width: 3%;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="conditionalpds in vm.conditionalpd">
+                            <td>{{ conditionalpds.ConditionalPD_Id }}</td>
+                            <td>{{ conditionalpds.AssetDescription }}</td>
+                            <td>{{ conditionalpds.AssetType }}</td>
+                            <td>{{ conditionalpds.Counterparty }}</td>
+                            <td>{{ conditionalpds.RatingAgency }}</td>
+                            <td>{{ conditionalpds.CreditRating }}</td>
+                            <td>{{ conditionalpds.SandPRating }}</td>
+                            <td>{{ conditionalpds.PD1 }}</td>
+                            <td>{{ conditionalpds.PD2 }}</td>
+                            <td>{{ conditionalpds.PD3 }}</td>
+                            <td>{{ conditionalpds.PD4 }}</td>
+                            <td>{{ conditionalpds.PD5 }}</td>
+                            <td>{{ conditionalpds.PD6 }}</td>
+                            <td>{{ conditionalpds.PD7 }}</td>
+                            <td>{{ conditionalpds.PD8 }}</td>
+                            <td>{{ conditionalpds.PD9 }}</td>
+                            <td>{{ conditionalpds.PD10 }}</td>
+                            <td>{{ conditionalpds.PD11 }}</td>
+                            <td>{{ conditionalpds.PD12 }}</td>
+                            <td>{{ conditionalpds.PD13 }}</td>
+                            <td>
+                                <a class="btn btn-orange btn-xs" data-ui-sref="ifrs9-conditionalpd-edit({ConditionalPD_Id: conditionalpds.ConditionalPD_Id})">
+                                    Edit
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>

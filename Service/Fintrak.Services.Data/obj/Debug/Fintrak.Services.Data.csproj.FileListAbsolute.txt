@@ -1,0 +1,2 @@
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\Service\Fintrak.Services.Data\obj\Debug\Fintrak.Services.Data.csproj.AssemblyReference.cache
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\Service\Fintrak.Services.Data\obj\Debug\Fintrak.Services.Data.csproj.CoreCompileInputs.cache

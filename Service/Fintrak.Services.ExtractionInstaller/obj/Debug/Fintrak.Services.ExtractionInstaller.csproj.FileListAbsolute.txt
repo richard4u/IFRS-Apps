@@ -1,0 +1,5 @@
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\Service\Fintrak.Services.ExtractionInstaller\obj\Debug\Fintrak.Services.ExtractionInstaller.csproj.AssemblyReference.cache
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\Service\Fintrak.Services.ExtractionInstaller\obj\Debug\Fintrak.Services.ExtractionInstaller.ExtractionInstallerService.resources
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\Service\Fintrak.Services.ExtractionInstaller\obj\Debug\Fintrak.Services.ExtractionInstaller.ProjectInstaller.resources
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\Service\Fintrak.Services.ExtractionInstaller\obj\Debug\Fintrak.Services.ExtractionInstaller.csproj.GenerateResource.cache
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\Service\Fintrak.Services.ExtractionInstaller\obj\Debug\Fintrak.Services.ExtractionInstaller.csproj.CoreCompileInputs.cache

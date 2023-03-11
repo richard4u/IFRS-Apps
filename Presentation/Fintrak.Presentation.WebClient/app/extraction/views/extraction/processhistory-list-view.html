@@ -1,0 +1,129 @@
+﻿
+
+<div class="main-content">
+    <div data-ng-include="'app/common/views/validation-view.html'"></div>
+    <div class="alert alert-danger fade in" data-ng-show="vm.showInstruction1">
+        <button class="close" data-dismiss="alert">&times;</button>
+        <i class="fa fa-info-circle"></i> {{vm.instruction}}
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <!--<label for="" class="control-label">Process Service Info:</label>-->
+            <!--<a class="btn {{ vm.btnColour }} btn-sm" data-ng-click="vm.getServiceStatus()"> {{vm.servicestatus}}</a>-->
+            <!--<a class="btn btn-info btn-sm" data-ng-click="vm.restartService()">Re-Start Service</a>-->
+            <!--<label ng-show="vm.showInfoLabel">{{ vm.infoLabel }}</label>-->
+        </div>
+    </div>
+    &nbsp;&nbsp;
+    <div class="row">
+        <div class="col-md-9">
+
+            <label for="" class="control-label">Time:</label>
+            <input type="text" ng-model="vm.runTime" class="input-sm" data-datepicker-popup="HH:mm" data-is-open="vm.openedRunTime" style="width:80px;" />
+            <button type="button" class="btn btn-default btn-sm" ng-click="vm.openRunTime($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+
+            <a class="btn btn-info btn-sm" data-ng-click="vm.runprocess()"> Run Process</a>
+            <!--<a class="btn btn-danger btn-sm" data-ng-click="vm.cancelProcesses()"> Cancel Process</a>-->
+
+        </div>
+        <!--<div class="col-md-3">
+            <h4><label style="font:bold">{{vm.code}}</label></h4>
+        </div>-->
+
+    </div>
+
+    <br />
+    <div class="col-md-9">
+        <h3>Current Run Date : {{vm.solutionRunDate | date:''}}</h3>
+    </div>
+    <br />
+
+    <div class="row">
+        <div class="col-md-4">
+
+            <div class="widget">
+                <div class="widget-header">
+                    <h3><i class="fa fa-calendar"></i>Process</h3>
+                    <div class="btn-group widget-header-toolbar">
+                        <a href="#" title="Expand/Collapse" class="btn-borderless btn-toggle-expand"><i class="fa fa-chevron-up"></i></a>
+                    </div>
+                </div>
+                <div class="widget-content">
+                    <ul class="list-unstyled simple-todo-list">
+                        <li ng-repeat="template in vm.processhistoryrun">
+                            <label class="fancy-checkbox">
+                                <input type="checkbox" ng-model="template.CanRun">
+                                <span class="todo-text">{{template.Alias}}</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="checkbox-list">
+                <label class="checkbox-inline">
+                    <input type="checkbox" data-ng-click="vm.checkAll()" id="checkall" />
+                    Check All
+                </label>
+            </div>
+
+        </div>
+
+        <div class="col-md-8">
+            <div class="widget widget-table">
+                <div class="widget-header">
+                    <h3>Process</h3>
+                    <div class="widget-header-toolbar">
+                        <a class="btn btn-warning btn-sm" data-ng-click="vm.loadProcessHistory()"> Refresh</a>
+                    </div>
+                    <div class="widget-header-toolbar process-status">
+                        <!--<span class="loading"><i class="fa fa-spinner fa-spin"></i> Loading ...</span>
+                <span class="saved green-font"><i class="fa fa-check"></i> Saved</span>
+                <span class="failed red-font"><i class="fa fa-remove"></i> Failed</span>-->
+                    </div>
+                </div>
+                <div class="widget-content">
+                    <div class="alert alert-info fade in" data-ng-show="vm.showInstruction">
+                        <button class="close" data-dismiss="alert">&times;</button>
+                        <i class="fa fa-info-circle"></i> {{vm.instruction}}
+                    </div>
+
+                    <table id="processhistoryTable" class="table table-hover table-striped table-bordered table-advanced tablesorter display datatable">
+
+                        <thead>
+                            <tr>
+                                <th>Process</th>
+                                <!--<th>Process Message</th>-->
+                                <th>Error Message</th>
+                                <th>Status</th>
+                                <th>User Name</th>
+                                <th>Date and Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="ProcessHistory in vm.ProcessHistory">
+                                <td>
+                                    {{ ProcessHistory.Process }}
+                                </td>
+                                <!--<td>
+                            {{ ProcessHistory.ProcessMessage }}
+                        </td>-->
+                                <td>
+                                    {{ ProcessHistory.ProcessErrorMessage }}
+                                </td>
+                                <td>
+                                    {{ ProcessHistory.ProcessStatus }}
+                                </td>
+                                <td>
+                                    {{ ProcessHistory.CreatedBy }}
+                                </td>
+                                <td>
+                                    {{ ProcessHistory.CreatedOn | date:'medium'  }}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+
+
+<div class="main-content">
+    <div class="widget widget-table">
+        <div class="widget-header">
+            <h3><i class="fa fa-table"></i> {{vm.viewName}}</h3> 
+        </div>
+        <div class="widget-content">
+            <div class="alert alert-info fade in" data-ng-show="vm.showInstruction">
+                <button class="close" data-dismiss="alert">&times;</button>
+                <i class="fa fa-info-circle"></i> {{vm.instruction}}
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    <form>
+                        <label for="" class="control-label">Main Search: </label>
+                        <input type="text" class="input-sm" placeholder="Enter Ref No to search" ng-model="vm.searchParam " style="width:300px" />
+                        <button type="button" class="btn btn-default btn-sm" ng-click="vm.loadCashFlowTBBySearch()">Load</button>
+                        <button type="button" class="btn btn-info btn-sm" ng-click="vm.refresh()">Refresh</button>
+                        <div type="button" class="btn btn-success btn-sm" ng-click="vm.exportAllData()">Export</div>
+                    </form>
+                </div>
+            </div> 
+
+
+            <!--<div>
+                <a class="btn btn-info btn-xs" data-ui-sref="ifrs9-cashflowtb-edit({InstrumentID:0})"> Create New</a>
+            </div> -->
+            <br />
+            
+            <table id="cashflowtbsTable" class="table table-hover table-striped table-bordered table-advanced tablesorter display datatable">
+
+                <thead>
+                    <tr>
+                        <th>RefNo</th>
+                        <th>Component</th>
+                        <th>Start Date</th>
+                        <th>Due Date</th>
+                        <th>Amount Due</th>
+                        <th>Amount Settled</th>
+                        <th>Over Due</th>
+                        <th>Rundate </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="cashflowtb in vm.cashflowtbs">
+                      
+                        <td>{{ cashflowtb.Refno }}</td>
+                        <td>{{ cashflowtb.Component }}</td>
+                        <td>{{ cashflowtb.Start_date | date}}</td>
+                        <td>{{ cashflowtb.Due_Date | date}}</td>
+                        <td>{{ cashflowtb.Amount_Due | number }}</td>
+                        <td>{{ cashflowtb.amount_settled | number}}</td>
+                        <td>{{ cashflowtb.Over_due | number}}</td>
+                        <td>{{ cashflowtb.Rundate | date }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

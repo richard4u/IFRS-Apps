@@ -1,0 +1,66 @@
+
+
+<div class="main-content">
+    <div class="widget widget-table">
+        <div class="widget-header">
+            <h3><i class="fa fa-table"></i> {{vm.viewName}}</h3> 
+        </div>
+        <div class="widget-content">
+            <div class="alert alert-info fade in" data-ng-show="vm.showInstruction">
+                <button class="close" data-dismiss="alert">&times;</button>
+                <i class="fa fa-info-circle"></i> {{vm.instruction}}
+              
+            </div>
+            <!--<div>
+                <label for="" class="control-label">Scenario:</label>
+                <select class="input-sm" ng-model="vm.scenerio" ng-options="scenario.Name as scenario.Name for scenario in vm.scenarios" ng-change="vm.loadScenario()" style="width:250px;" ></select>
+              
+            </div>-->
+            <br />
+            
+            <table id="SegmentPerformanceTable" class="table table-hover table-striped table-bordered table-advanced tablesorter display datatable">
+
+                <thead>
+                    <tr>
+                        <th>Segment Code</th>
+                        <th>Segment Name</th>                        
+                        <th>Period</th>
+                        <th>Non Performing Count</th>
+                        <th>Previously Performing Count</th>
+                        <th>Estimate</th>
+                        <th style="width: 3%;">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="segmentperformance in vm.segmentperformance">
+                        <td>
+                            {{ segmentperformance.SegmentCode}}
+                        </td>
+                        <td>
+                            {{ segmentperformance.SegmentName}}
+                        </td>
+                        <td>
+                            {{ segmentperformance.Period}}
+                        </td>
+                        <td>
+                            {{ segmentperformance.Non_Performing_Count}}
+                        </td>
+                        <td>
+                            {{ segmentperformance.Previously_Performing_Count}}
+                        </td>
+                          <td>
+                            {{ segmentperformance.Estimate}}
+                        </td>
+                        <!--<td>
+                            <a class="btn btn-orange btn-xs" data-ui-sref="ifrs9-segmentperformance-edit({SegmentId: segmentperformance.SegmentId})">
+                                Edit
+                            </a>
+                        </td>-->
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+</div>

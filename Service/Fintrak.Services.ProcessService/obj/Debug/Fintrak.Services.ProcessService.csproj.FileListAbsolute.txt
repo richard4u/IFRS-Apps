@@ -1,0 +1,5 @@
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\Service\Fintrak.Services.ProcessService\obj\Debug\Fintrak.Services.ProcessService.csproj.AssemblyReference.cache
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\Service\Fintrak.Services.ProcessService\obj\Debug\Fintrak.Services.ProcessService.ProcessService.resources
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\Service\Fintrak.Services.ProcessService\obj\Debug\Fintrak.Services.ProcessService.ProjectInstaller.resources
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\Service\Fintrak.Services.ProcessService\obj\Debug\Fintrak.Services.ProcessService.csproj.GenerateResource.cache
+C:\Users\USER\source\repos\FinstatOnCloud.richard1\Service\Fintrak.Services.ProcessService\obj\Debug\Fintrak.Services.ProcessService.csproj.CoreCompileInputs.cache
